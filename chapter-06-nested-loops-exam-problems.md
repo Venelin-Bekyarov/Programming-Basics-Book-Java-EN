@@ -124,7 +124,7 @@ We can divide the figure into 3 parts - **upper wing**  ,  **body** and **lower 
 
 ![](assets/chapter-6-2-images/02.Butterfly-02.png)
 
-We also see that the upper wing of the butterfly is of size **`n - 2`**, so we can make a loop that repeats **`halfRowSize`** times.
+We also see that the upper wing of the butterfly is of size **`n - 2`**, so we can make a loop that iterates **`halfRowSize`** times.
 
 ![](assets/chapter-6-2-images/02.Butterfly-03.png)
 
@@ -185,7 +185,7 @@ Once we have declared and initialized the two variables, we can print the start 
 
 ![](assets/chapter-6-2-images/03.Stop-04.png)
 		
-In order to draw the lines where the sign is getting **"wider"**, we have to create **a loop**, that rotates **`n`** number of times. The structure of a line consists of a beginning **`.`**, **`//`** + middle part **`_`** + **`\\`** and an end **`.`**. In order to be able to reuse the created **variables** , we need to decrease the **`dots`** by 1 and the **`underscores`** by 2, because we have already **printed** the first row, and the dots and underscores in the next line of the figure **decrease**. 
+In order to draw the lines where the sign is getting **"wider"**, we have to create **a loop**, that iterates **`n`** number of times. The structure of a line consists of a beginning **`.`**, **`//`** + middle part **`_`** + **`\\`** and an end **`.`**. In order to be able to reuse the created **variables** , we need to decrease the **`dots`** by 1 and the **`underscores`** by 2, because we have already **printed** the first row, and the dots and underscores in the next line of the figure **decrease**. 
 
 ![](assets/chapter-6-2-images/03.Stop-05.png)
 		
@@ -197,7 +197,7 @@ At each subsequent iteration the **beginning** and the **end**  decreasing with 
 
 ![](assets/chapter-6-2-images/03.Stop-07.png)
 		
-**The lower part** of the figure where the sign **decreases**, can be done by creating a **loop** again, which repeats **`n`** number of times. The structure of a single line is a beginning **`.`** + **`\\`**, a middle part **`_`** and an end **`//`** + **`.`**. The number of the **dots** in the first iteration of the loop should be 0 and **increases** by one on each subsequent iteration. Therefore, we can say that the size of the **dots in the lower part of the figure** is equal to **`i`**.
+**The lower part** of the figure where the sign **decreases**, can be done by creating a **loop** again, which iterates **`n`** number of times. The structure of a single line is a beginning **`.`** + **`\\`**, a middle part **`_`** and an end **`//`** + **`.`**. The number of the **dots** in the first iteration of the loop should be 0 and **increases** by one on each subsequent iteration. Therefore, we can say that the size of the **dots in the lower part of the figure** is equal to **`i`**.
 
 ![](assets/chapter-6-2-images/03.Stop-08.png)
 		
@@ -246,11 +246,11 @@ The number of the **internal dots** in the arrow body is **`(n - 2)`**. We need 
 
 ![](assets/chapter-6-2-images/04.Arrow-03.png)
 		
-We can see from the examples the structure of the initial line. We must use the **`outerDots`** and n **variables** declared and initialized by us to print the **starting row**. We must remember that we have to move to a new line with **`System.out.println();`**.
+We can see from the examples the structure of the initial line. We must use the **`outerDots`** and **`n`** **variables** declared and initialized by us to print the **starting row**. We must remember that we have to move to a new line with **`System.out.println();`**.
 
 ![](assets/chapter-6-2-images/04.Arrow-04.png)
 
-In order to draw on the **arrow's body** on the console , we have to create a **loop**, which repeats **`n - 2`** times.
+In order to draw on the **arrow's body** on the console , we have to create a **loop**, which iterates **`n - 2`** times.
 
 ![](assets/chapter-6-2-images/04.Arrow-05.png)
 
@@ -262,7 +262,7 @@ To draw the **the arrow’s lower part**, we need to assign new values to the **
 
 ![](assets/chapter-6-2-images/04.Arrow-07.png)
 
-**The loop**, we are going to make must repeats **`n - 2`**times and we need to print the last row of the figure separately. On each iteration **`outerDots`** increases by 1, and **`innerDots`** decreases by 2.
+**The loop**, we are going to make must iterates **`n - 2`**times and we need to print the last row of the figure separately. On each iteration **`outerDots`** increases by 1, and **`innerDots`** decreases by 2.
 
 ![](assets/chapter-6-2-images/04.Arrow-08.png)
 		
@@ -304,7 +304,7 @@ In order to solve the problem, we first need to calculate the **dashes on the le
 
 ![](assets/chapter-6-2-images/05.Axe-01.png)
 
-Once we have declared and initialized the **variables**, we can begin drawing the figure by starting with the **upper part**. From the examples, we can figure out the structure of the **first row** and to create a loop that repeats **`n`** number of times. At each iteration of the loop the **middle dashes** increase by 1, and the **dashes on the right** decrease by 1.
+Once we have declared and initialized the **variables**, we can begin drawing the figure by starting with the **upper part**. From the examples, we can figure out the structure of the **first row** and to create a loop that iterates **`n`** number of times. At each iteration of the loop the **middle dashes** increase by 1, and the **dashes on the right** decrease by 1.
 
 ![](assets/chapter-6-2-images/05.Axe-02.png)
 
@@ -312,7 +312,7 @@ In order to be able to reuse the created **variables** when drawing the axe’s 
 
 ![](assets/chapter-6-2-images/05.Axe-03.png)
 
-We can draw the **handle of the axe** by repeating the loop **`n - 2`** times. From the examples we can understand what its structure is. 
+We can draw the **handle of the axe** by iterating the loop **`n - 2`** times. From the examples we can understand what its structure is. 
 
 ![](assets/chapter-6-2-images/05.Axe-04.png)
 
