@@ -1,6 +1,6 @@
 # Chapter 6.2. Nested Loops – Exam Problems
 
-In the previous chapter we looked at **nested loops** and how to use them to **draw** different kinds of **figures on the console**. We learned how to print figures with different sizes, thinking of an appropriate logic to construct them using **single and nested `for`** loops in combination with various calculations and program logic:
+In the previous chapter we got familiar with **nested loops** and to use them **drawing** different kinds of **figures on the console**. We learned how to print different size figures, inventing an appropriate logic to construct them using **single and nested** `for` loops in combination with various calculations and program logic:
 
 ```java
 for (int row = 1; row <= 5; row++) {
