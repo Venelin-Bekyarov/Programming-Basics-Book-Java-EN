@@ -19,12 +19,12 @@ We also declared our own method **`repeatStr(…)`** which helps us to print **a
 
 ## Exam Problems
 
-Let's solve several exam problems related to nested loops to practice what we have learned and to further develop our algorithmic thinking.
+Let's solve several nested loops related exam tasks to practice what we have learned so far and to develop our further algorithmic thinking.
 
 
 ## Problem: Drawing a Fort
 
-Write a program that reads from the console **an integer n** and draws **a fortress** with width **2 * n columns** and height **n rows** like the examples below. The left and right columns on the inside are with width **n / 2**.
+Write a program that reads from the console **an integer n** and draws **a fortress** with width **2 * n columns** and height **n rows** like the examples below. The left and right columns on the inside are **n / 2** wide.
 
 ### Input Data
 
@@ -46,30 +46,30 @@ Print on the console **n** text rows, depicting **the fortress**, exactly like t
 
 ### Hints and Guidelines
 
-We can see from the task that the **input data** will be only one line which will contains **an integer** within the range [**3 … 1000**]. Therefore, we will use a **variable** of type **`int`**.
+From the task criteria we see that the **input data** will be one line only containing **an integer** within the range [**3 … 1000**]. Therefore, we will use a **variable** of type `int`.
 
 ![](assets/chapter-6-2-images/01.Draw-fort-01.png)
 
-After we have declared and initialized the input data, we must divide **the fort** into three parts:
+Once we have declared and initialized the input data, we need to divide **the fort** into three parts:
 * roof
 * body
 * base
 
-We can see from the examples that **the roof** is made of **two towers** and **a middle part**. Each tower has a beginning **`/`**, middle part **`^`** and an end **`\`**.
+We can see from the examples that **the roof** is made of **two towers** and **a middle part**. Each tower has a beginning **`/`**, a middle part **`^`** and an end **`\`**.
 
 <table><tr><td><img src="/assets/alert-icon.png" style="max-width:50px" /></td>
-<td><strong><code>\</code></strong> is a special symbol in Java and using only it in the method <strong><code>System.out.println(…)</code></strong>, the console will not print it, that's why with <strong><code>\\</code></strong> we show on the console that we want to print exactly this symbol, without being interpreted as a special one (<b>екранираме го</b>, in English this is called “<b>character escaping</b>”).</td>
+<td><strong><code>\</code></strong> is a special symbol in Java. Using it in the <strong><code>System.out.println(…)</code></strong> method, the console will not print it. That's why using <strong><code>\\</code></strong> we instruct the console that we want to print exactly this symbol, without being interpreted as a special one (<b>it is shielded</b>- this is called “<b>character escaping</b>”).</td>
 </tr></table>
 
 The size of the middle part is **`n / 2`**, therefore we can write this value in a new **variable**. It will store the **size** of the **middle part of the tower**.
 
 ![](assets/chapter-6-2-images/01.Draw-fort-02.png)
 
-Now we declare a second **variable**, in which we will store the **value** of the part **between the two towers**. The middle part of the roof has size of **`2 * n - 2 * colSize - 4`**.
+Now we declare a second **variable**, where we will store the **value** of **between the two towers** part. The middle roof part has size of **`2 * n - 2 * colSize - 4`**.
 
 ![](assets/chapter-6-2-images/01.Draw-fort-03.png)
 
-In order to print on the console the **roof**, we will use our method **`repeatStr(…)`**, which accepts two parameters **`(string, int)`** and concatenate a certain symbol (or series of characters) **n** times.
+In order to print the **roof** on the console, we will use our **`repeatStr(…)`** method, which accepts two parameters **`(string, int)`** and concatenate a certain symbol (or series of characters) **n** times.
 
 ![](assets/chapter-6-2-images/01.Draw-fort-04.png)
 
