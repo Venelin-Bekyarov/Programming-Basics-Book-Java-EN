@@ -1,6 +1,6 @@
 # Chapter 6.2. Nested Loops – Exam Problems
 
-In the previous chapter we got familiar with **nested loops** and to use them **drawing** different kinds of **figures on the console**. We learned how to print different size figures, inventing an appropriate logic to construct them using **single and nested** `for` loops in combination with various calculations and program logic:
+In the previous chapter we got familiar with **nested loops** and to use them **drawing** different kinds of **figures on the console**. We learned how to print different size figures, inventing an appropriate logic to construct them using **single and nested** **`for`** loops in combination with various calculations and program logic:
 
 ```java
 for (int row = 1; row <= 5; row++) {
@@ -73,23 +73,23 @@ In order to print the **roof** on the console, we will use our **`repeatStr(…)
 
 ![](assets/chapter-6-2-images/01.Draw-fort-04.png)
 
-**The body of the fort** contains a beginning **`|`**, middle part **`(white space)`** and an end **`|`**. **The middle part** is a blank space with size of **`2 * n - 2`**. The number of the **rows** used for walls could be found by the given parameters - **`n - 3`**.
+**The fort body** contains a beginning **`|`**, a middle part **`(white space)`** and an end **`|`**. **The middle part** is a blank space with size of **`2 * n – 2`**. The number of the **rows** used for walls could be found by the given parameters - **`n - 3`**.
 
 ![](assets/chapter-6-2-images/01.Draw-fort-05.png)
 
-In order to draw the last row, which is a part of the base, we need to print the beginning **`|`**, the middle part **`(white space)_(white space)`** and an end **`|`**. In order to do this, we can use the already declared variables **`colSize`** and **`midSize`**, because we can see from the examples that they are equal to the **`_`** in the roof.
+In order to draw the last row, which is a part of the base, we need to print the beginning **`|`**, the middle part **`(white space)_(white space)`** and an end **`|`**. To do this, we can use the declared **`colSize`** and **`midSize`** variables, because we can see from the examples that they are equal to the **`_`** symbol in the roof.
 
 ![](assets/chapter-6-2-images/01.Draw-fort-06.png)
 
-We add to the values of the **blank spaces** **`+ 1`**, because we have in the examples **one** blank space more.
+We add to the values of the **blank spaces** **`+ 1`**, because we have **one** blank space more in the examples.
 
-The structure of the **base of the fort** is the same as the one of the **roof**. It is made of **two towers** and a **middle part**. Each **tower** has a beginning **`\`**, middle part **`_`** and an end **`/`**.
+The **fort’s base** structure is same as the **roof** one. It is made of **two towers** and a **middle part**. Each **tower** has a beginning **`\`**, a middle part **`_`** and an end **`/`**.
 
 ![](assets/chapter-6-2-images/01.Draw-fort-07.png)
 
 ### Testing in the Judge System
 
-Test your solution here: [https://judge.softuni.bg/Contests/Practice/Index/658#0](https://judge.softuni.bg/Contests/Practice/Index/658#0).
+Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/658#0](https://judge.softuni.org/Contests/Practice/Index/658#0).
 
 
 ## Problem: Butterfly
@@ -142,7 +142,7 @@ Now we need to print the lower wing, which is the same as the upper one.
 
 ### Testing in the Judge System
 
-Test your solution here: [https://judge.softuni.bg/Contests/Practice/Index/658#1](https://judge.softuni.bg/Contests/Practice/Index/658#1).
+Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/658#1](https://judge.softuni.org/Contests/Practice/Index/658#1).
 
 
 ## Problem: "Stop" Sign
