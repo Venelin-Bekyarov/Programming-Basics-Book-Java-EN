@@ -193,34 +193,34 @@ At each subsequent iteration the **beginning** and the **end**  decreasing with 
 
 ![](assets/chapter-6-2-images/03.Stop-06.png)
 		
-**The middle part** of the figure has a beginning **`//`** + **`_`**, middle part **`STOP!`** and an end **`_`** + **`\\`**. The count of the underscores **`_`** is **`(underscores - 5) / 2`**.
+**The middle part** of the figure has a beginning **`//`** + **`_`**, a middle part **`STOP!`** and an end **`_`** + **`\\`**. The count of the underscores **`_`** is **`(underscores - 5) / 2`**.
 
 ![](assets/chapter-6-2-images/03.Stop-07.png)
 		
-**The lower part** of the figure where the sign **decreases**, can by done again by creating a **loop**, which rotates **`n`** times. The structure of a single line is a beginning **`.`** + **`\\`**, middle part **`_`** and an end **`//`** + **`.`**. The number of the **dots** in the first iteration should be 0 and in each following one it **increases** by one. Therefore, we can say that the size of the **dots in the lower part of the figure** is equals to **`i`**.
+**The lower part** of the figure where the sign **decreases**, can be done by creating a **loop** again, which repeats **`n`** number of times. The structure of a single line is a beginning **`.`** + **`\\`**, a middle part **`_`** and an end **`//`** + **`.`**. The number of the **dots** in the first iteration of the loop should be 0 and **increases** by one on each subsequent iteration. Therefore, we can say that the size of the **dots in the lower part of the figure** is equal to **`i`**.
 
 ![](assets/chapter-6-2-images/03.Stop-08.png)
 		
-In order for our program to work properly, in each iteration of the **loop** we need to **decrease** the number of **`i`** with **2**.
+For our program to work properly, we need to **reduce** the number of **`i`** by **2** at each iteration of the **loop**.
 
 ![](assets/chapter-6-2-images/03.Stop-09.png)
 
 ### Testing in the Judge System
 
-Test your solution here: [https://judge.softuni.bg/Contests/Practice/Index/658#2](https://judge.softuni.bg/Contests/Practice/Index/658#2).
+Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/658#2](https://judge.softuni.org/Contests/Practice/Index/658#2).
 
 
 ## Problem: Arrow
 
-Write a program that has an input from the console **an odd integer n** and draws a **vertical arrow** with size as in the examples below.
+Write a program that reads an **odd integer n** from the console and draws a **vertical arrow** pointing down, with dimensions as in the examples below.
 
 ### Input Data
 
-The input is an **integer odd number n** in the range of [**3 … 79**].
+The input is an **odd integer number n** in the range of [**3 … 79**].
 
 ### Output Data
 
-Print a vertical arrow on the console, in which "**`#`**" (sharp) marks the outline of the arrow, and the "**`.`**" - the rest.
+Print a vertical arrow on the console with "**`#`**" (hash) outlining the arrow and "**`.`**" outlining the rest.
 
 ### Sample Input and Output
 
@@ -234,51 +234,51 @@ Print a vertical arrow on the console, in which "**`#`**" (sharp) marks the outl
 
 ### Hints and Guidelines
 
-We can see from the task explanation that **the input data** will come from only one line which contains an **integer** in the range of [**3 … 79**]. Therefore, we will use a **variable** of type **`int`**.
+From the task condition, we see that **the input data** will be read from only one line which contains an **integer** in the range of [**3 … 79**]. Therefore, we will use a **variable** of type **`int`**.
 
 ![](assets/chapter-6-2-images/04.Arrow-01.png)
 		
-We can divide the figure into **3 parts** - upper, middle and lower. **The upper part** consists of two subparts - starting row and body of the arrow. We can see from the examples that the number of the **external dots** in the starting row and in the body of the arrow are **`(n - 1) / 2`**. We can write this value in a **variable** **`outerDots`**. 
+We can divide the figure into **3 parts** - upper, middle and lower. **The upper part** consists of two subparts – the initial row and the arrow body. From the examples we see that the number of the **outer dots** in the initial row and in the arrow body are **`(n - 1) / 2`**. We can store this value in a  **`outerDots`** **variable**.
 
 ![](assets/chapter-6-2-images/04.Arrow-02.png)
 		
-The number of the **internal dots** in the body of the arrow is **`(n - 2)`**. We need to create a **variable** with name **`innerDots`**, which will store this value.
+The number of the **internal dots** in the arrow body is **`(n - 2)`**. We need to create a **variable** named **`innerDots`**, which will store this value.
 
 ![](assets/chapter-6-2-images/04.Arrow-03.png)
 		
-We can see from the examples the structure of the first row. We must use the declared and initialized **variables** **`outerDots`** and **`n`**, in order to print the **starting row**. We must not forget that we have to move to a new line with **`System.out.println();`**.
+We can see from the examples the structure of the initial line. We must use the **`outerDots`** and n **variables** declared and initialized by us to print the **starting row**. We must remember that we have to move to a new line with **`System.out.println();`**.
 
 ![](assets/chapter-6-2-images/04.Arrow-04.png)
 
-In order to draw on the console the **body of the arrow**, we have to create a **loop**, which rotates **`n - 2`** times.
+In order to draw on the **arrow's body** on the console , we have to create a **loop**, which repeats **`n - 2`** times.
 
 ![](assets/chapter-6-2-images/04.Arrow-05.png)
 
-**The middle part of the figure** consists of a beginning **`#`**, middle part **`.`** and an end **`#`**. We see from the examples that the number of the **`#`** is equals to **`outerDots`** increased by 1 and that is why we can use again the same **variable**.
+**The middle part of the figure** consists of a beginning **`#`**, a middle part **`.`** and an end **`#`**. We see from the examples that the number of the **`#`** is equal to **`outerDots`** increased by 1 and that is why we can use the same **variable** again.
 
 ![](assets/chapter-6-2-images/04.Arrow-06.png)
 
-To draw the **lower part of the arrow**, we need to assign new values to the **variables** **`outerDots`** and **`innerDots`**.
+To draw the **the arrow’s lower part**, we need to assign new values to the **variables** **`outerDots`** and **`innerDots`**.
 
 ![](assets/chapter-6-2-images/04.Arrow-07.png)
 
-**The loop**,  we are going to make must rotate **`n - 2`** times and we need to print the last row of the figure separately. On each iteration **`outerDots`** increases by 1, and **`innerDots`** decreases by 2.
+**The loop**, we are going to make must repeats **`n - 2`**times and we need to print the last row of the figure separately. On each iteration **`outerDots`** increases by 1, and **`innerDots`** decreases by 2.
 
 ![](assets/chapter-6-2-images/04.Arrow-08.png)
 		
-**The last row** of our figure is made of a beginning **`.`**, middle part **`#`** and an end **`.`**. The number of the **`.`** is equals to **`outerDots`**.
+**The last row** of our figure is made of a beginning **`.`**, a middle part **`#`** and an end **`.`**. The number of the **`.`** is equal to **`outerDots`**.
    
 ![](assets/chapter-6-2-images/04.Arrow-09.png)
 
 ### Testing in the Judge System
 
-Test your solution here: [https://judge.softuni.bg/Contests/Practice/Index/658#3](https://judge.softuni.bg/Contests/Practice/Index/658#3).
+Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/658#3](https://judge.softuni.org/Contests/Practice/Index/658#3).
 
 
 ## Problem: Axe
 
-Write a program that takes as an input an **integer n** and draws an axe with size as shown below.
-The width of the axe is **`5 * N`** columns.
+Write a program that takes as an input an **integer n** and draws an axe with size as shown below. 
+The axe is **`5 * N`** columns wide.
 
 ### Input Data
 
