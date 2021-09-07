@@ -46,7 +46,7 @@ Print on the console **n** text rows, depicting **the fortress**, exactly like t
 
 ### Hints and Guidelines
 
-From the task criteria we see that the **input data** will be one line only containing **an integer** within the range [**3 … 1000**]. Therefore, we will use a **variable** of type `int`.
+From the task statement we see that the **input data** will be one line only containing **an integer** within the range [**3 … 1000**]. Therefore, we will use a **variable** of type **`int`**.
 
 ![](assets/chapter-6-2-images/01.Draw-fort-01.png)
 
@@ -94,7 +94,7 @@ Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/658#
 
 ## Problem: Butterfly
 
-Write a program that reads from the console an **integer n** and draws a **butterfly** with width **2 * n - 1 columns** and a height **2 * (n - 2) + 1 rows** like the examples below. **The left and right** **parts** are with **width n - 1**.
+Write a program that reads an **integer n** from the console and draws a **butterfly** with **2 * n - 1 columns**  width and  **2 * (n - 2) + 1 rows** height as in the examples below. Its **left and right sides** are **n – 1** wide.
 
 ### Input Data
 
@@ -102,7 +102,7 @@ The input is an **integer n** in the range of [**3 … 1000**].
 
 ### Output Data
 
-Print on the console **2 * (n - 2) + 1**  text rows, depicting the **butterfly**, exactly like the examples.
+Print **2 * (n - 2) + 1** text lines, representing the **butterfly** on the console, just like in the examples.
 
 ### Sample Input and Output
 
@@ -116,27 +116,27 @@ Print on the console **2 * (n - 2) + 1**  text rows, depicting the **butterfly**
 
 ### Hints and Guidelines
 
-From the task we can see that the **input data** will be only one line which will contains an **integer** within the range [**3 … 1000**]. That is why we will use **a variable** of type **`int`**.
+From the task statement we see that the **input data** will be read from only one line, which will contain an **integer** in the range [**3 … 1000**]. For this reason, we will use **a variable** of type **`int`**.
 
 ![](assets/chapter-6-2-images/02.Butterfly-01.png)
 
-We can divide the figure into 3 parts - **upper wing**, **body** and **lower wing**. In order to draw the upper wing, we need to divide it into parts - a beginning **`*`**, middle part **`\ /`** and an end **`*`**. After looking at the examples we find out that the beginning is with size **`n - 2`**.
+We can divide the figure into 3 parts - **upper wing**  ,  **body** and **lower wing** . In order to draw the upper wing, we need to divide it into parts - a beginning **`*`**, a middle part **`\ /`** and an end **`*`**. After looking at the examples we can say that the beginning has size **`n - 2`**.
 
 ![](assets/chapter-6-2-images/02.Butterfly-02.png)
 
-We can also see that the upper wing is with size **`n - 2`**, and that's why we can make a loop which repeats **`halfRowSize`** times.
+We also see that the upper wing of the butterfly is of size **`n - 2`**, so we can make a loop that repeats **`halfRowSize`** times.
 
 ![](assets/chapter-6-2-images/02.Butterfly-03.png)
 
-We can see in the examples that on an **even** row we have a beginning **`-`**, middle part **`\ /`** and an end **`*`**, and on a **odd** - a beginning **`*`**, middle part **`\ /`** and an end **`-`**. Therefore, we have to do an **`if-else`** condition to check if the row is even or odd and then to draw one of the two types of rows.
+From the examples we can notice that on an **even** row we have a beginning **`-`**, a middle part **`\ /`** and an end **`*`**, and on an **odd** line - a beginning **`*`**, a middle part **`\ /`** and an end **`-`**. Therefore, we need to do an **`if-else`** condition to check whether the line is even or odd and print one of the two types of lines accordingly.
 
 ![](assets/chapter-6-2-images/02.Butterfly-04.png)
 
-In order to create the **body of the butterfly**, we can use the **variable** **`halfRowSize`** and to print on the console exactly **one** line. The structure of the body begins with **`(white spave)`**, middle part **`@`** and ends with **`(white space)`**.
+To create the **body of the butterfly** , we can again use the  **`halfRowSize`** **variable**  and print exactly **one** line on the console. The body structure has a beginning **`(white space)`**, a middle **`@`** and an end **`(white space)`**.
 
 ![](assets/chapter-6-2-images/02.Butterfly-05.png)
 
-Now we need to print the lower wing, which is the same as the upper one.
+It remains to print the lower wing on the console, which is identical to the upper wing. 
 
 ![](assets/chapter-6-2-images/02.Butterfly-06.png)
 
@@ -147,7 +147,7 @@ Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/658#
 
 ## Problem: "Stop" Sign
 
-Write a program that reads from the console an **integer n** and draws the **warning sign STOP** with size as in the example below.
+Write a program that reads an **integer n** from the console and draws a **STOP warning sign** with size as in the example below.
 
 ### Input Data
 
@@ -155,7 +155,7 @@ The input is an **integer N** in the range of [**3 … 1000**].
 
 ### Output Data
 
-Print on the console text lines which depict **the warning sign STOP** as in the examples below.
+Print text lines on the console depicting the **STOP warning sign**, just as in the examples below.
 
 ### Sample Input and Output
 
@@ -169,27 +169,27 @@ Print on the console text lines which depict **the warning sign STOP** as in the
 
 ### Hints and Guidelines
 
-We can see from the task explanation that **the input data** will come from only one line which contains an **integer** in the range of [**3 … 1000**]. Therefore, we will use a **variable** of type **`int`**.
+From the task statement we see that **the input data** will be read from only one line which contains an **integer** in the range of [**3 … 1000**]. Therefore, we will use a **variable** of type **`int`**.
 
 ![](assets/chapter-6-2-images/03.Stop-01.png)
 
-We can **divide** the figure into **3 parts** - upper, middle and lower. **The upper part** contains two sub-parts -  first row and rows in which the sign widens. **The first row** is made of a beginning **`.`**, middle part **`_`** and an end **`.`**. After looking at the examples we can say that the beginning is with size **`n + 1`** so it is good to separate this **value** in a separate **variable**.
+We can **divide** the figure into **3 parts** - upper, middle and lower. **The upper part** consists of two sub-parts - an initial line and lines in which the character expands. **The start row** is composed of a beginning **`.`**, a middle part **`_`** and an end **`.`**. After looking at the examples we can say that the beginning is of size **`n + 1`** and it is better to to separate this **value** into a separate **variable**.
 
 ![](assets/chapter-6-2-images/03.Stop-02.png)
 		
-We must also create a second **variable**, in which we will store the **value** of the **middle of the first row** which has a size of **`2 * n + 1`**.
+We need to create a second **variable** in which we will store the **value** of the **middle of the initial row** and is of size **`2 * n + 1`**.
 
 ![](assets/chapter-6-2-images/03.Stop-03.png)
 		
-After we have declared and initialized the two variables, we can print the first row on the console. Let's not forget moving to a new line on the console with **`System.out.println(…)`**.
+Once we have declared and initialized the two variables, we can print the start line to the console. Let's not forget to pass a new line to the console with **`System.out.println(…)`**.
 
 ![](assets/chapter-6-2-images/03.Stop-04.png)
 		
-In order to draw the rows in which the sign is getting **"wider"**, we have to create **a loop**, to rotate **`n`** times. The structure of a row contains a beginning **`.`**, **`//`** + middle part **`_`** + **`\\`** and an end **`.`**. In order to reuse the already created **variables**, we have to decrease the **`dots`** with 1 and the **`underscores`** with 2, because we have already **printed** the first row, and the dots and underscores in the next rows of the figure are **decreasing**. 
+In order to draw the lines where the sign is getting **"wider"**, we have to create **a loop**, that rotates **`n`** number of times. The structure of a line consists of a beginning **`.`**, **`//`** + middle part **`_`** + **`\\`** and an end **`.`**. In order to be able to reuse the created **variables** , we need to decrease the **`dots`** by 1 and the **`underscores`** by 2, because we have already **printed** the first row, and the dots and underscores in the next line of the figure **decrease**. 
 
 ![](assets/chapter-6-2-images/03.Stop-05.png)
 		
-In each following iteration the **beginning** and the **end** are decreasing with 1, and the **middle part** increases by 2.
+At each subsequent iteration the **beginning** and the **end**  decreasing with 1, and the **middle part** increases by 2.
 
 ![](assets/chapter-6-2-images/03.Stop-06.png)
 		
@@ -201,7 +201,7 @@ In each following iteration the **beginning** and the **end** are decreasing wit
 
 ![](assets/chapter-6-2-images/03.Stop-08.png)
 		
-In order for our program to work properly, in each iteration of the **loop** we need to **decrease** the number of **`_`** with **2**.
+In order for our program to work properly, in each iteration of the **loop** we need to **decrease** the number of **`i`** with **2**.
 
 ![](assets/chapter-6-2-images/03.Stop-09.png)
 
