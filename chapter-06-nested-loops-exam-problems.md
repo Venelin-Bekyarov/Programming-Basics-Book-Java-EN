@@ -132,7 +132,7 @@ From the examples we can notice that on an **even** row we have a beginning **`-
 
 ![](assets/chapter-6-2-images/02.Butterfly-04.png)
 
-To create the **body of the butterfly** , we can again use the  **`halfRowSize`** **variable**  and print exactly **one** line on the console. The body structure has a beginning **`(white space)`**, a middle **`@`** and an end **`(white space)`**.
+To create the **body of the butterfly** , we can use again the  **`halfRowSize`** **variable**  and print exactly **one** line on the console. The body structure has a beginning **`(white space)`**, a middle **`@`** and an end **`(white space)`**.
 
 ![](assets/chapter-6-2-images/02.Butterfly-05.png)
 
@@ -300,30 +300,30 @@ Print on the console an **axe**, exactly like the examples.
 
 ### Hints and Guidelines
 
-In order to solve the problem, first we need to calculate the **dashes on the left**, **the middle dashes**, **the dashes on the right** and the whole length of the figure.
+In order to solve the problem, we first need to calculate the **dashes on the left, the middle dashes, the dashes on the right** and the whole length of the figure.
 
 ![](assets/chapter-6-2-images/05.Axe-01.png)
 
-After we have declared and initialized the **variables**, we can begin drawing the figure by starting with the **upper part**. We can see from the examples what is the structure of the **first row** and to create a loop which rotates **`n`** times. On each iteration the **middle dashes** increase by 1, and the **dashes on the right** decrease by 1.
+Once we have declared and initialized the **variables**, we can begin drawing the figure by starting with the **upper part**. From the examples, we can figure out the structure of the **first row** and to create a loop that repeats **`n`** number of times. At each iteration of the loop the **middle dashes** increase by 1, and the **dashes on the right** decrease by 1.
 
 ![](assets/chapter-6-2-images/05.Axe-02.png)
 
-In order to use the created **variables** when drawing the handle of the ax you need to decrease the **middle dashes** by 1, and the **dashes on the right** to increase by 1.
+In order to be able to reuse the created **variables** when drawing the axe’s handle, we need to decrease the **middle dashes** by 1, and increase the **dashes on the right** by 1.
 
 ![](assets/chapter-6-2-images/05.Axe-03.png)
 
-**The handle of the axe** we can draw by rotating the loop **`n - 2`** times. We can see in the examples what its structure is.
+We can draw the **handle of the axe** by repeating the loop **`n - 2`** times. From the examples we can understand what its structure is. 
 
 ![](assets/chapter-6-2-images/05.Axe-04.png)
 
-**The lower part** of the figure we have to divide into 2 subparts - **the head of the axe** and the **last row from the axe**. **The head of the axe** we will print on the console as we create a loop which rotates **`n / 2 - 1`** times. On each iteration the **dashes on the left** and **the dashes on the right** decrease by 1, and the **middle dashes** increase by 2.
+**The lower part** of the figure we have to divide into 2 subparts - **the head of the axe** and the **last row** of the figure. We will print the **axe’s head** on the console by creating a loop that repeats **`n / 2 - 1`** number of times. At each iteration the **dashes on the left** and **the dashes on the right** decrease by 1, and the **middle dashes** increase by 2.
 
 ![](assets/chapter-6-2-images/05.Axe-05.png)
 
-For the **last row** of the figure we can use the three declared and initialized variables **`leftDashes`**, **`middleDashes`**, **`rightDashes`**.
+For the **last row** of the figure we can use the three declared and initialized variables **`leftDashes`**, **`middleDashes`**, **`rightDashes`** again.
 
 ![](assets/chapter-6-2-images/05.Axe-06.png)
 
 ### Testing in the Judge System
 
-Test your solution here: [https://judge.softuni.bg/Contests/Practice/Index/658#4](https://judge.softuni.bg/Contests/Practice/Index/658#4).
+Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/658#4](https://judge.softuni.org/Contests/Practice/Index/658#4).
