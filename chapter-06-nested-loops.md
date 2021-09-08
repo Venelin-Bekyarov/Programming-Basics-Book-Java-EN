@@ -46,7 +46,7 @@ To perform the task, we will use the **`Scanner`** class, which allows us to rea
 
 #### Test the code in the Judge system
 
-Test your solution here: [https://judge.softuni.bg/Contests/Practice/Index/657#1](https://judge.softuni.bg/Contests/Practice/Index/657#1).
+Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/657#1](https://judge.softuni.org/Contests/Practice/Index/657#1).
 
 
 ## Nested Loops
@@ -312,12 +312,12 @@ After we have finished with the roof, it is time for the base. It is easier to p
 
 #### Test the code in the Judge system
 
-Test your solution here: [https://judge.softuni.bg/Contests/Practice/Index/657#8](https://judge.softuni.bg/Contests/Practice/Index/657#8).
+Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/657#8](https://judge.softuni.org/Contests/Practice/Index/657#8).
 
 
 ### Example: Diamond 
 
-Write a program that reads an integer number **n** (1 ≤ **n** ≤ 100) from the console and returns as output **a diamond** with a size of **n**, just like examples below.
+Write a program that reads an integer number **n** (1 ≤ **n** ≤ 100) from the console and returns as output **a diamond** with a size of **n**, just like the examples below.
 
 |Input|Output|Input|Output|Input|Output|
 |---|---|---|---|---|---|
@@ -331,29 +331,29 @@ Write a program that reads an integer number **n** (1 ≤ **n** ≤ 100) from th
 |---|---|---|---|---|---|
 |7|<code>---\*---</code><br><code>--\*-\*--</code><br><code>-\*---\*-</code><br><code>\*-----\*</code><br><code>-\*---\*-</code><br><code>--\*-\*--</code><br><code>---\*---</code><br>|8|<code>---\*\*---</code><br><code>--\*--\*--</code><br><code>-\*----\*-</code><br><code>\*------\*</code><br><code>-\*----\*-</code><br><code>--\*--\*--</code><br><code>---\*\*---</code><br>|9|<code>----\*----</code><br><code>---\*-\*---</code><br><code>--\*---\*--</code><br><code>-\*-----\*-</code><br><code>\*-------\*</code><br><code>-\*-----\*-</code><br><code>--\*---\*--</code><br><code>---\*-\*---</code><br><code>----\*----</code>|
 
-#### Hint and guidelines
+#### Hints and guidelines
 
 According to the requirements of the task, have **`n`** rows and **`n`** columns to draw a diamond, but from the input and output data, we can see the following:
 
 * All lines contain exactly **`n`** characters, and all lines, except the upper and the bottom ones, have **two asterisks** (**`*`**).
 
-We can divide (mentally) the diamond into **two parts**: 
-* **Upper** part. Include from the top of the diamond and to the middle of the diamond (includes **and** the middle row).
-* **Lower** part. Include from the row immediately after the middle of the diamond and to the bottom of the diamond(inclusive).
+We can divide (imaginary) the diamond into **two parts**: 
+* **Upper** part. It starts from the top to the middle of the diamond (includes **and** the middle row).
+* **Lower** part. It starts from the row after the middle up to the bottom tip (inclusive) of the diamond.
 
 ##### Upper part
 * If **n** is **odd**, begins with **1 asterisk** (**`*`**).
 * If **n** is **even**, begins with **2 asterisks** (**`**`**).
 * With each row down, the asterisks move away from each other.
-* The space before, between, and after the **asterisks** (**`*`**) is filled with **dashes** (**`-`**). 
+* The space infront, between, and after the **asterisks** (**`*`**) is filled with **dashes** (**`-`**). 
 
 ##### Lower part
 * With each row down, the asterisks come together. It means that the space (**dashes**) between them decreases, and the space (**dashes**) on the left and right increases.
 * At its bottom, it has 1 or 2 **asterisks**, depending on whether **n** is odd or even.
 
 ##### Upper and lower part
-* On each row, the asterisks are surrounded from the outer side (the left or the right one) by **dashes**, except for the middle row.
-* Each row has a space between the two **asterisks**, except for the first and last row (sometimes **the asterisk is one**).
+* On each row, the asterisks are surrounded from the outer side (the left or the right one) by **dashes**, except the middle row.
+* Each row has a space between the two **asterisks**, except the first and last row (sometimes **the asterisk is one**).
 
 ##### Reading the Input Data
 
@@ -363,23 +363,23 @@ We read an integer **`n`** from the console and assign the value of an integer t
 
 ##### Printing the upper part of the diamond
 
-We start drawing the upper part of the diamond. The first thing we need to do is to calculate the number of the outer **dashes `leftRight`** (the dashes on the outer side of the **asterisks**). It is equal to **`(n - 1) / 2`**, rounded down.
+We begin drawing the upper part of the diamond. The first thing we need to do is to calculate the number of the outer **dashes `leftRight`** (the dashes on the outer side of the **asterisks**). It is equal to **`(n - 1) / 2`**, rounded downward.
 
 ![](assets/chapter-6-1-images/10.Diamond-02.png)
 
-After we have calculated **`leftRight`**, we start drawing the **upper part** of the diamond. We can use **a loop** from **`0`* to **`n / 2 + 1`** (rounded down).
+After we have calculated **`leftRight`**, we start drawing the **upper part** of the diamond. We can use **a loop** from **`0`* to **`n / 2 + 1`** (rounded downward).
 
 At each iteration of the loop the following steps are performed:
 * We draw as an output on the console **dashes** on the left side of the diamond (with length equals to **`leftRight`**) and right after them the first **asterisk**.
 
 ![](assets/chapter-6-1-images/10.Diamond-03.png)
 
-* We will calculate the distance between the two **asterisks**. We can do this by subtracting from **n** the number of the outer **dashes** and the number 2 (the number of the **asterisks**, ie. the diamond's outline). The result of the subtraction assign to a variable **`mid`**.
+* We will calculate the distance between the two **asterisks**. We can do this by subtracting from **n** the number of the outer **dashes** and the number 2 (the number of the **asterisks**, i.e. the diamond's outline). The result of the subtraction assign to a variable **`mid`**.
 
 ![](assets/chapter-6-1-images/10.Diamond-04.png)
 
-* If **`mid`** is lower than 0, we know that on the row should be only 1 asterisk. If it is higher or equal to 0 then we have to print **dashes** with length equals to **`mid`** and one **asterisk** after them.
-* We draw as an output on the console **dashes** on the right side of the diamond with length equals to **`leftRight`**.
+* If **`mid`** is lower than 0, we know that on the row should be only 1 asterisk. If it is higher or equal to 0 then we have to print **dashes** with length equal to **`mid`** and one **asterisk** after them.
+* We draw as an output on the console **dashes** on the right side of the diamond with length equal to **`leftRight`**.
 
 ![](assets/chapter-6-1-images/10.Diamond-05.png)
 
@@ -401,7 +401,7 @@ Printing the lower part is similar to that of the upper part. The differences ar
 
 #### Test the code in the Judge system
 
-Test your solution here: [https://judge.softuni.bg/Contests/Practice/Index/657#9](https://judge.softuni.bg/Contests/Practice/Index/657#9).
+Test your solution here: [https://judge.softuni.org/Contests/Practice/Index/657#9](https://judge.softuni.org/Contests/Practice/Index/657#9).
 
 
 ## What we learned in this chapter?
