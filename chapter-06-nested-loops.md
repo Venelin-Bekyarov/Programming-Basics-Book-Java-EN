@@ -1,6 +1,6 @@
 # Chapter 6.1 Nested Loops
 
-This chapter will discuss **nested loops in the Java language**. We will use **`for`** loops to **draw** different **figures** containing symbols and signs arranged in rows and columns **on the console**. We will use **`for` loop** and **nested loops** (loop statement inside another loop statement), **calculations** and **checks**, to print on the console simple and not so simple figures in given sizes.
+This chapter will discuss **nested loops in Java language**. We will use **`for`** loops to **draw** different **figures** containing symbols and signs arranged in rows and columns **on the console**. We will use **`for` loop** and **nested loops** (loop statement inside another loop statement), **calculations** and **checks**, to print on the console simple and not so simple figures in given sizes.
 
 
 ## Video
